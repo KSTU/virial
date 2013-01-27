@@ -1,0 +1,18 @@
+$MAIN
+WORKDIR='/home/manyak/Dropbox/MCP/workspace/vircharge'
+NAZ='try.txt'	!название файла для 
+TEMPM=10.0 		!893.84	!К  !115
+TEMPK=60.0	 !1027.0	!К      !670
+KTEMP=11
+SIGMIN=1.0
+SIGMAX=1.0
+SIGK=1
+EPSMIN=1.0
+EPSMAX=1.0
+EPSK=1
+ALFMIN=1.0
+ALFMAX=1.0
+ALFK=1
+NSTEP=5000
+PTIP=8			!1-KK 2-LJ 3-BUK
+/
