@@ -6,6 +6,10 @@ set(virial_VERSION_MINOR 1)
 
 #Fing cuda
 find_package(CUDA QUIET REQUIRED)
-message(${CUDA_VERSION})
-message(${CMAKE_CXX_COMPILER})
+message("cuda version" ${CUDA_VERSION})
+message("cmake version" ${CMAKE_CXX_COMPILER})
 cuda_add_executable(virial main.cu)
+cuda_add_library(messages STATIC messages.cu)
+cuda_add_library(input STATIC input.cu)
+cuda_add_library(integ STATIC integrate.cu)
+target_link_libraries(virial messages input integ)
