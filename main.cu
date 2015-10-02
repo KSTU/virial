@@ -2,7 +2,7 @@
 #include "messages.h"
 #include "input.h"
 #include "simulation.h"
-
+#include "integrate.h"
 
 int main(int argc, char *argv[]){
 	int DeviceCount;
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]){
 	}
 	if(strcmp(sp.type,"IL")==0){
 		f_message("compute for ionic liquid type");
-		if (prop_boundary(&sub,&top)!=0){
+		if (prop_boundary(&substance,&top)!=0){
 			f_error("boundary fail");
 			return 1;
 		}
